@@ -1,6 +1,6 @@
 var Webpack = require('webpack');
 var path = require('path');
-var appPath = path.resolve(__dirname, 'app');
+var appPath = path.resolve(__dirname, 'js');
 var nodeModulesPath = path.resolve(__dirname, 'node_modules');
 var buildPath = path.resolve(__dirname, 'public', 'build');
 
@@ -9,8 +9,8 @@ var config = {
   devtool: 'eval-source-map',
   entry: [
     'webpack-dev-server/client?http://localhost:9090',
-    'webpack/hot/dev-server',
-    path.resolve(appPath, 'main.js')],
+    'webpack/hot/dev-server'
+  ],
   output: {
     path: buildPath,
     filename: 'bundle.js',

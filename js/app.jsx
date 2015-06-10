@@ -28,7 +28,7 @@ var app = app || {};
     },
 
     handleNewTodoKeyDown: function (e) {
-      if (e.which !== ENTER_KEY) {
+      if (e.keyCode !== ENTER_KEY) {
         return;
       }
 

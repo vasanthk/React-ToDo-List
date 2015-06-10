@@ -12,6 +12,8 @@ var port = isProduction ? process.env.PORT : 9090;
 var publicPath = path.resolve(__dirname, 'public');
 
 app.use(express.static(publicPath));
+app.use('/js', express.static(__dirname, '/js'));
+app.use('/node_modules', express.static(__dirname, '/node_modules'));
 
 if (!isProduction) {
 
